@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Growway Distribuidora - Sua parceira estratégica em soluções de distribuição</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --primary: #0D2430;
+            --secondary: #1A4D6E;
+            --accent: #D4AF37;
+            --dark: #07141C;
+            --light: #F8FAFC;
+            --neutral: #EDF2F7;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: -0.02em;
+            font-weight: 600;
+        }
+        .hero-gradient {
+            background: linear-gradient(112deg, rgba(15,43,56,0.94) 0%, rgba(29,69,88,0.94) 100%);
+        }
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            border-radius: 8px;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+            border-color: rgba(192, 160, 98, 0.3);
+        }
+        .product-card:hover .product-overlay {
+            opacity: 1;
+        }
+        .product-overlay {
+            transition: opacity 0.3s ease;
+            opacity: 0;
+        }
+        .brand-img {
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: all 0.3s ease;
+        }
+        .brand-img:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white sticky top-0 z-50 border-b border-[var(--neutral)] shadow-sm">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex items-center justify-between">
+                <a href="#" class="flex items-center space-x-3 group">
+                    <img src="https://imgproxy.gamma.app/resize/quality:80/resizing_type:fit/width:1200/https://cdn.gamma.app/npumm7tbnw9hcjw/f713eea5989a49fdafb73e8e707a70d0/original/3D-growway.png" 
+                         alt="Growway Logo" class="h-12 transition duration-300 group-hover:scale-105">
+                    <span class="text-xl font-bold text-[var(--primary)] tracking-tight">GROWWAY</span>
+                </a>
+                
+                <div class="hidden md:flex items-center space-x-10">
+                    <a href="#about" class="text-sm tracking-wide text-[var(--dark)] hover:text-[var(--accent)] transition uppercase">Quem Somos</a>
+                    <a href="#products" class="text-sm tracking-wide text-[var(--dark)] hover:text-[var(--accent)] transition uppercase">Produtos</a>
+                    <a href="#differentials" class="text-sm tracking-wide text-[var(--dark)] hover:text-[var(--accent)] transition uppercase">Diferenciais</a>
+                    <a href="#contact" class="text-sm tracking-wide text-[var(--dark)] hover:text-[var(--accent)] transition uppercase">Contato</a>
+                </div>
+                
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-gray-700 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <a href="#about" class="block py-2 text-gray-700 hover:text-green-600 transition">Quem Somos</a>
+                <a href="#products" class="block py-2 text-gray-700 hover:text-green-600 transition">Produtos</a>
+                <a href="#differentials" class="block py-2 text-gray-700 hover:text-green-600 transition">Diferenciais</a>
+                <a href="#contact" class="block py-2 text-gray-700 hover:text-green-600 transition">Contato</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-[90vh] min-h-[600px] flex items-center text-white overflow-hidden">
+        <div class="absolute inset-0 hero-gradient opacity-95"></div>
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                 alt="Modern warehouse" class="w-full h-full object-cover object-center scale-110 animate-zoom">
+        </div>
+        <div class="container mx-auto px-6 z-10">
+            <div class="max-w-2xl">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                    <span class="text-yellow-300">Eficiência</span> em<br>Distribuição Corporativa
+                </h1>
+                <p class="text-lg md:text-xl mb-10 opacity-90">
+                    Soluções logísticas integradas que impulsionam seu negócio com agilidade e excelência operacional.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#contact" class="bg-[var(--accent)] hover:bg-opacity-90 text-[var(--dark)] font-medium py-3 px-8 rounded-full transition-all duration-300 tracking-wide hover:shadow-lg hover:-translate-y-1">
+                        <i class="fas fa-phone-volume mr-2"></i> Fale com um especialista
+                    </a>
+                    <a href="#products" class="bg-white/10 hover:bg-white/20 border border-white/50 text-white font-medium py-3 px-8 rounded-full transition-all duration-300 tracking-wide">
+                        Nossos Produtos <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-0 right-0 flex justify-center animate-bounce">
+            <a href="#about" class="w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center border border-white/20 hover:border-white/40 transition-all">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="inline-block bg-[var(--accent)]/10 text-[var(--accent)] px-4 py-1 rounded-full text-sm font-medium mb-4">SOBRE NÓS</span>
+                <h1 class="text-4xl md:text-5xl font-bold text-[var(--primary)] mb-4 max-w-2xl mx-auto leading-tight">
+                    Parceria Estratégica <br>em <span class="text-[var(--accent)]">Logística</span>
+                </h1>
+                <div class="w-20 h-1.5 bg-[var(--accent)] mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                    Especializada em distribuição corporativa, oferecemos soluções sob medida com certificação de qualidade do Governo de São Paulo.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-10 mb-20">
+                <div class="bg-white p-8 rounded-sm shadow-sm card-hover text-center border border-[var(--neutral)] hover:shadow-md transition-all duration-300">
+                    <div class="w-16 h-16 bg-[var(--neutral)] rounded-sm flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-map-marker-alt text-[var(--secondary)] text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-4 text-[var(--dark)] tracking-tight">Localização Estratégica</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Localizados em Elias Fausto, SP, atendemos diversos setores, desde farmácias e laboratórios até indústrias e prefeituras.
+                    </p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md card-hover text-center">
+                    <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-handshake text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Atendimento Personalizado</h3>
+                    <p class="text-gray-600">
+                        Oferecemos um atendimento consultivo, entendendo as necessidades de cada cliente para oferecer as melhores soluções.
+                    </p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md card-hover text-center">
+                    <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-award text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Excelência Comprovada</h3>
+                    <p class="text-gray-600">
+                        Somos atestados pelo próprio Governo do Estado de São Paulo em entrega, qualidade, cumprimento de prazos e eficiência.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="relative bg-green-700 rounded-xl overflow-hidden shadow-xl">
+                <div class="absolute inset-0 opacity-10 bg-gradient-to-r from-yellow-400 to-green-600"></div>
+                <div class="relative z-10 p-10">
+                    <blockquote class="max-w-3xl mx-auto text-center text-white">
+                        <h3 class="text-2xl md:text-3xl font-bold mb-6">"Atendendo às demandas do setor público, fortalecendo o progresso."</h3>
+                        <div class="flex items-center justify-center">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Bras%C3%A3o_do_Estado_de_S%C3%A3o_Paulo.svg/1200px-Bras%C3%A3o_do_Estado_de_S%C3%A3o_Paulo.svg.png" 
+                                 alt="Governo SP" class="h-12 mr-4">
+                            <span class="text-green-200">Atestados pelo Governo do Estado de São Paulo</span>
+                        </div>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Nossa <span class="text-green-600">Missão, Visão e Valores</span></h2>
+                <div class="w-20 h-1 bg-green-500 mx-auto mb-6"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-md card-hover group relative overflow-hidden">
+                    <div class="absolute inset-0 bg-green-600 opacity-10 group-hover:opacity-20 transition duration-500"></div>
+                    <div class="relative">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
+                            <span class="text-green-600 font-bold text-2xl">1</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 text-gray-800">Missão</h3>
+                        <p class="text-gray-600">
+                            Fornecer soluções completas, ágeis e seguras para a distribuição de produtos nos setores público e privado.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-md card-hover group relative overflow-hidden">
+                    <div class="absolute inset-0 bg-yellow-500 opacity-10 group-hover:opacity-20 transition duration-500"></div>
+                    <div class="relative">
+                        <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mb-6">
+                            <span class="text-yellow-600 font-bold text-2xl">2</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 text-gray-800">Visão</h3>
+                        <p class="text-gray-600">
+                            Ser referência no fornecimento de produtos de alta qualidade, construindo parcerias duradouras e de confiança.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-md card-hover group relative overflow-hidden">
+                    <div class="absolute inset-0 bg-blue-500 opacity-10 group-hover:opacity-20 transition duration-500"></div>
+                    <div class="relative">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                            <span class="text-blue-600 font-bold text-2xl">3</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 text-gray-800">Valores</h3>
+                        <p class="text-gray-600">
+                            Compromisso, eficiência, transparência, inovação, sustentabilidade e responsabilidade social.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Variedade de <span class="text-green-600">Produtos</span></h2>
+                <div class="w-20 h-1 bg-green-500 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto">
+                    Oferecemos produtos de qualidade para diversos setores, garantindo sempre o melhor para sua empresa.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md card-hover">
+                    <div class="h-48 bg-yellow-50 flex items-center justify-center">
+                        <i class="fas fa-flask text-yellow-500 text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">Laboratórios</h3>
+                        <p class="text-gray-600 mb-4">
+                            Vidrarias, reagentes, luvas e equipamentos de precisão.
+                        </p>
+                        <ul class="text-sm text-gray-500 space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Equipamentos certificados</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Qualidade garantida</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md card-hover">
+                    <div class="h-48 bg-blue-50 flex items-center justify-center">
+                        <i class="fas fa-hospital text-blue-500 text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">Hospitalares</h3>
+                        <p class="text-gray-600 mb-4">
+                            Materiais médicos e equipamentos de suporte.
+                        </p>
+                        <ul class="text-sm text-gray-500 space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Produtos esterilizados</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Certificados Anvisa</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md card-hover">
+                    <div class="h-48 bg-purple-50 flex items-center justify-center">
+                        <i class="fas fa-briefcase text-purple-500 text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">Escritórios</h3>
+                        <p class="text-gray-600 mb-4">
+                            Papelaria, organizadores e suprimentos essenciais.
+                        </p>
+                        <ul class="text-sm text-gray-500 space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Diversas marcas</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Materiais sustentáveis</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md card-hover">
+                    <div class="h-48 bg-red-50 flex items-center justify-center">
+                        <i class="fas fa-tools text-red-500 text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">Indústrias e EPIs</h3>
+                        <p class="text-gray-600 mb-4">
+                            Maquinários, ferramentas e proteção individual completa.
+                        </p>
+                        <ul class="text-sm text-gray-500 space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Normas regulamentadoras</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Alta durabilidade</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md card-hover">
+                    <div class="h-48 bg-green-50 flex items-center justify-center">
+                        <i class="fas fa-utensils text-green-500 text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">Alimentos e Matéria-Prima</h3>
+                        <p class="text-gray-600 mb-4">
+                            Oferecemos uma seleção premium de produtos alimentícios e matérias-primas.
+                        </p>
+                        <ul class="text-sm text-gray-500 space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Qualidade certificada</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Validade estendida</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md card-hover">
+                    <div class="h-48 bg-indigo-50 flex items-center justify-center">
+                        <i class="fas fa-laptop text-indigo-500 text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">Eletrônicos e Linha Branca</h3>
+                        <p class="text-gray-600 mb-4">
+                            Soluções completas para equipar seu escritório ou empresa.
+                        </p>
+                        <ul class="text-sm text-gray-500 space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Tecnologia avançada</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Garantia estendida</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expansion Section -->
+    <section class="py-24 bg-[var(--primary)] text-white">
+        <div class="absolute inset-0 opacity-5 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxyZWN0IHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgZmlsbD0iI2ZmZiIvPjxwYXRoIGQ9Ik0zMCAzMEMxNi43NDY3IDMwIDYgNDMuNTg4NSA2IDYwTTMwIDMwQzQzLjI1MzMgMzAgNTQgNDMuNTg4NSA1NCA2ME0zMCAzMEMzMCAxNi40MTE1IDQzLjI1MzMgNiA2MCA2TTMwIDMwQzMwIDE2LjQxMTUgMTYuNzQ2NyA2IDAgNiIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utb3BhY2l0eT0iMC4xIiBzdHJva2Utd2lkdGg9IjIiLz48L2c+PC9zdmc+')]"></div>
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Fortaleça Seu Negócio com a Growway</h2>
+                <div class="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white bg-opacity-10 p-6 rounded-lg backdrop-blur-sm card-hover">
+                    <div class="w-14 h-14 bg-yellow-400 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-chart-line text-green-900 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center">Expansão de Mercado</h3>
+                    <p class="text-gray-200 text-center">
+                        Aumentamos nossa participação no setor privado, oferecendo soluções inovadoras e personalizadas.
+                    </p>
+                </div>
+                
+                <div class="bg-white bg-opacity-10 p-6 rounded-lg backdrop-blur-sm card-hover">
+                    <div class="w-14 h-14 bg-yellow-400 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-boxes text-green-900 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center">Diversificação do Portfólio</h3>
+                    <p class="text-gray-200 text-center">
+                        Adicionamos novos produtos para atender diferentes segmentos de mercado com soluções completas.
+                    </p>
+                </div>
+                
+                <div class="bg-white bg-opacity-10 p-6 rounded-lg backdrop-blur-sm card-hover">
+                    <div class="w-14 h-14 bg-yellow-400 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-cogs text-green-900 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center">Otimização Operacional</h3>
+                    <p class="text-gray-200 text-center">
+                        Implementamos uma logística eficiente e tecnologia de ponta para garantir entregas rápidas e seguras.
+                    </p>
+                </div>
+                
+                <div class="bg-white bg-opacity-10 p-6 rounded-lg backdrop-blur-sm card-hover">
+                    <div class="w-14 h-14 bg-yellow-400 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-bullhorn text-green-900 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center">Fortalecimento da Marca</h3>
+                    <p class="text-gray-200 text-center">
+                        Investimos em marketing e atendimento personalizado para construir relacionamentos duradouros.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Differentiators Section -->
+    <section id="differentials" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Diferenciais da <span class="text-green-600">Growway</span></h2>
+                <div class="w-20 h-1 bg-green-500 mx-auto mb-6"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-md card-hover text-center">
+                    <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-user-tie text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Atendimento Personalizado</h3>
+                    <p class="text-gray-600">
+                        Equipe especializada focada em entender suas necessidades e oferecer a melhor solução.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-md card-hover text-center">
+                    <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-star text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Produtos de Alta Qualidade</h3>
+                    <p class="text-gray-600">
+                        Trabalhamos apenas com fornecedores certificados e produtos de excelência.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-md card-hover text-center">
+                    <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-truck text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Agilidade na Entrega</h3>
+                    <p class="text-gray-600">
+                        Logística eficiente que garante cumprimento de prazos com rastreamento em tempo real.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-md card-hover text-center">
+                    <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-tags text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Preços Competitivos</h3>
+                    <p class="text-gray-600">
+                        Estrutura enxuta que permite oferecer os melhores preços do mercado.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Marcas <span class="text-green-600">Parceiras</span></h2>
+                <div class="w-20 h-1 bg-green-500 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto">
+                    Conheça algumas das marcas que confiam em nossos serviços e na nossa gestão de distribuição.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 px-4">
+                <div class="flex items-center justify-center p-4">
+                    <img src="https://imgproxy.gamma.app/resize/quality:80/resizing_type:fit/height:400/https://cdn.gamma.app/npumm7tbnw9hcjw/d9a1dda617634bee9619d298347463a4/original/Logotipo_da_marca_Uniao_-2014-.svg.png" 
+                         alt="União" class="h-16 brand-img">
+                </div>
+                <div class="flex items-center justify-center p-4">
+                    <img src="https://imgproxy.gamma.app/resize/quality:80/resizing_type:fit/height:400/https://cdn.gamma.app/npumm7tbnw9hcjw/b554aa665f9f45cea40a1e27b6580083/original/Logo-Grupo-Santa-Isabel-Colorido-1024x286.png" 
+                         alt="Santa Isabel" class="h-16 brand-img">
+                </div>
+                <div class="flex items-center justify-center p-4">
+                    <img src="https://imgproxy.gamma.app/resize/quality:80/resizing_type:fit/height:400/https://cdn.gamma.app/npumm7tbnw9hcjw/77106b00198b44e4adeb3dd268f6716b/original/logo_descarpack_BmAem7.png" 
+                         alt="Descarpack" class="h-16 brand-img">
+                </div>
+                <div class="flex items-center justify-center p-4">
+                    <img src="https://imgproxy.gamma.app/resize/quality:80/resizing_type:fit/height:400/https://cdn.gamma.app/npumm7tbnw9hcjw/07bb319f4e934d00b8b0e14f5ec9443b/original/Logo_camil.png" 
+                         alt="Camil" class="h-16 brand-img">
+                </div>
+                <div class="flex items-center justify-center p-4">
+                    <img src="https://imgproxy.gamma.app/resize/quality:80/resizing_type:fit/height:400/https://cdn.gamma.app/npumm7tbnw9hcjw/5f7cadad09584eb2a612d8ddeae65527/original/Associados_2024_Seara.webp" 
+                         alt="Seara" class="h-16 brand-img">
+                </div>
+                <div class="flex items-center justify-center p-4">
+                    <img src="https://imgproxy.gamma.app/resize/quality:80/resizing_type:fit/height:400/https://cdn.gamma.app/npumm7tbnw9hcjw/f76e9df547ee447b96779f5b8f486f48/original/logo-300x102.png" 
+                         alt="Predilecta" class="h-16 brand-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Commitment Section -->
+    <section class="py-20 bg-green-50">
+        <div class="container mx-auto px-6">
+            <div class="bg-white rounded-xl shadow-xl p-10 max-w-6xl mx-auto relative overflow-hidden">
+                <div class="absolute -right-10 -top-10 w-32 h-32 bg-green*100 rounded-full opacity-20"></div>
+                <div class="absolute -left-10 -bottom-10 w-32 h-32 bg-green*100 rounded-full opacity-20"></div>
+                <div class="relative z-10">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6 text-center">Compromisso com o <span class="text-green-600">Cliente</span></h2>
+                    <div class="w-20 h-1 bg-green-500 mx-auto mb-10"></div>
+                    
+                    <div class="grid md:grid-cols-3 gap-8 mb-10">
+                        <div class="flex items-start">
+                            <div class="bg-green-100 p-3 rounded-full mr-4 mt-1">
+                                <i class="fas fa-user-graduate text-green-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-2 text-gray-800">Equipe Qualificada</h3>
+                                <p class="text-gray-600">
+                                    Equipe de atendimento altamente qualificada para te auxiliar em todas as etapas.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-green-100 p-3 rounded-full mr-4 mt-1">
+                                <i class="fas fa-headset text-green-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-2 text-gray-800">Canais Acessíveis</h3>
+                                <p class="text-gray-600">
+                                    Canais de comunicação acessíveis e eficientes para você entrar em contato.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-green-100 p-3 rounded-full mr-4 mt-1">
+                                <i class="fas fa-bolt text-green-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-2 text-gray-800">Solução Rápida</h3>
+                                <p class="text-gray-600">
+                                    Solução rápida e eficaz de problemas e dúvidas que possam surgir.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center">
+                        <h3 class="text-xl font-bold text-gray-800 mb-6">Growway: Seu Parceiro Estratégico</h3>
+                        <p class="text-gray-600 max-w-2xl mx-auto mb-8">
+                            Conte com a Growway Distribuidora para otimizar seus processos, reduzir custos e garantir o sucesso do seu negócio. Sua satisfação é o nosso maior objetivo!
+                        </p>
+                        <a href="#contact" class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">
+                            Fale Conosco Agora
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-900 text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Entre em <span class="text-green-400">Contato</span> Conosco!</h2>
+                <div class="w-20 h-1 bg-green-400 mx-auto mb-6"></div>
+                <p class="text-gray-300 max-w-3xl mx-auto">
+                    Estamos prontos para atender sua empresa com qualidade, eficiência e os melhores preços do mercado. Não perca tempo, solicite um orçamento agora mesmo!
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-bold mb-6 text-green-400">Fale com nossa equipe</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-green-600 p-3 rounded-full mr-4">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1 text-gray-300">Telefones</h4>
+                                <p class="text-gray-300">(19) 99978-8108 <br> (19) 99385-3551</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-green-600 p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1 text-gray-300">E-mails</h4>
+                                <p class="text-gray-300">diretoria@growway.com.br <br> compras@growway.com.br <br> comercial@growway.com.br</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-green-600 p-3 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1 text-gray-300">Endereço</h4>
+                                <p class="text-gray-300">Elias Fausto, SP - Brasil</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-10">
+                        <h4 class="text-xl font-bold mb-4 text-green-400">Siga-nos</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-green-600 transition">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-green-600 transition">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-green-600 transition">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-green-600 transition">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-bold mb-6 text-green-400">Envie uma mensagem</h3>
+                    <form class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-gray-300 mb-2">Nome</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-gray-300 mb-2">E-mail</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400">
+                        </div>
+                        
+                        <div>
+                            <label for="phone" class="block text-gray-300 mb-2">Telefone</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400">
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block text-gray-300 mb-2">Assunto</label>
+                            <select id="subject" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 text-gray-300">
+                                <option value="">Selecione...</option>
+                                <option value="orcamento">Orçamento</option>
+                                <option value="duvida">Dúvida</option>
+                                <option value="sugestao">Sugestão</option>
+                                <option value="reclamacao">Reclamação</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-gray-300 mb-2">Mensagem</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg transition duration-300 mt-4">
+                            Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 border-t border-gray-800">
+        <div class="container mx-auto px-6 py-10">
+            <div class="grid md:grid-cols-4 gap-10">
+                <div>
+                    <img src="https://imgproxy.gamma.app/resize/quality:80/resizing_type:fit/width:1200/https://cdn.gamma.app/npumm7tbnw9hcjw/f713eea5989a49fdafb73e8e707a70d0/original/3D-growway.png" 
+                         alt="Growway Logo" class="h-10 mb-4">
+                    <p class="text-sm">
+                        Sua parceira estratégica em soluções de distribuição, combinando excelência operacional com atendimento personalizado.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-4">Links Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="hover:text-green-400 transition">Quem Somos</a></li>
+                        <li><a href="#products" class="hover:text-green-400 transition">Produtos</a></li>
+                        <li><a href="#differentials" class="hover:text-green-400 transition">Diferenciais</a></li>
+                        <li><a href="#contact" class="hover:text-green-400 transition">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-4">Produtos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-green-400 transition">Laboratórios</a></li>
+                        <li><a href="#" class="hover:text-green-400 transition">Hospitalares</a></li>
+                        <li><a href="#" class="hover:text-green-400 transition">Escritórios</a></li>
+                        <li><a href="#" class="hover:text-green-400 transition">EPIs</a></li>
+                        <li><a href="#" class="hover:text-green-400 transition">Alimentos</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-4">Contato</h4>
+                    <address class="not-italic">
+                        <p class="mb-2"><i class="fas fa-map-marker-alt mr-2 text-green-400"></i> Elias Fausto, SP - Brasil</p>
+                        <p class="mb-2"><i class="fas fa-phone mr-2 text-green-400"></i> (19) 99978-8108</p>
+                        <p class="mb-2"><i class="fas fa-phone mr-2 text-green-400"></i> (19) 99385-3551</p>
+                    </address>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-sm text-center md:text-left">
+                    &copy; 2023 Growway Distribuidora. Todos os direitos reservados.
+                </p>
+                
+                <div class="mt-4 md:mt-0 flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-green-400 transition">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-green-400 transition">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-green-400 transition">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-green-400 transition">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 bg-green-600 hover:bg-green-700 text-white rounded-full shadow-lg flex items-center justify-center transition-opacity duration-300 opacity-0 invisible">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Back to Top Button
+        const backToTopBtn = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.remove('opacity-0', 'invisible');
+                backToTopBtn.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopBtn.classList.remove('opacity-100', 'visible');
+                backToTopBtn.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
