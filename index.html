@@ -4,25 +4,71 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Growway Distribuidora - Sua parceira estratégica em soluções de distribuição</title>
-  <link rel="icon" href="./favicon.ico" />
-  <link rel="manifest" href="./site.webmanifest" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- 1. Favicon na raiz -->
+  <link rel="icon" href="favicon.ico" />
+  <link rel="manifest" href="site.webmanifest" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     :root {
-      --primary: #0D2430; --accent: #D4AF37; --dark: #07141C;
-      --neutral: #EDF2F7; --green-light: #ECFDF3;
-      --yellow-light: #FFFBEB; --blue-light: #EFF6FF;
+      --primary: #0d2430;
+      --accent: #d4af37;
+      --dark: #07141c;
+      --neutral: #edf2f7;
+      --green-light: #ecfdf3;
+      --yellow-light: #fffbe b;
+      --blue-light: #eff6ff;
     }
-    body { margin:0; font-family:'Poppins',sans-serif; color:var(--dark); }
-    h1,h2,h3,h4,h5,h6 { font-family:'Montserrat',sans-serif; font-weight:600; letter-spacing:-0.02em; }
-    .hero-gradient { background:linear-gradient(112deg,rgba(15,43,56,0.85)0%,rgba(29,69,88,0.85)100%); }
-    .hero-text-shadow { text-shadow:0 2px 8px rgba(0,0,0,0.6); }
-    .card-hover { transition:all .3s ease; border-radius:.5rem; border:1px solid rgba(0,0,0,0.05); }
-    .card-hover:hover { transform:translateY(-4px); box-shadow:0 8px 20px rgba(0,0,0,0.08); }
-    .brand-img { filter:grayscale(100%); opacity:.7; transition:.3s ease; }
-    .brand-img:hover { filter:grayscale(0); opacity:1; }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      color: var(--dark);
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+    .hero-gradient {
+      background: linear-gradient(
+        112deg,
+        rgba(15, 43, 56, 0.85) 0%,
+        rgba(29, 69, 88, 0.85) 100%
+      );
+    }
+    .hero-text-shadow {
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+    }
+    .card-hover {
+      transition: all 0.3s ease;
+      border-radius: 0.5rem;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+    .card-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    }
+    .brand-img {
+      filter: grayscale(100%);
+      opacity: 0.7;
+      transition: 0.3s ease;
+    }
+    .brand-img:hover {
+      filter: grayscale(0);
+      opacity: 1;
+    }
   </style>
 </head>
 <body class="bg-gray-50">
@@ -31,7 +77,12 @@
   <nav class="bg-white sticky top-0 z-50 border-b border-gray-200 shadow-sm">
     <div class="container mx-auto px-6 py-3 flex justify-between items-center">
       <a href="#" class="flex items-center space-x-3">
-        <img src="./assets/logos/logogroww.png" alt="Growway Logo" class="h-12">
+        <!-- 2. Logo apontando para assets/logos -->
+        <img
+          src="assets/logos/logogroww.png"
+          alt="Growway Logo"
+          class="h-12"
+        />
         <span class="text-xl font-bold text-[var(--primary)]">GROWWAY</span>
       </a>
       <div class="hidden md:flex space-x-8 uppercase text-sm">
@@ -40,7 +91,9 @@
         <a href="#differentials" class="hover:text-[var(--accent)]">Diferenciais</a>
         <a href="#contact" class="hover:text-[var(--accent)]">Contato</a>
       </div>
-      <button id="menu-btn" class="md:hidden"><i class="fas fa-bars text-2xl"></i></button>
+      <button id="menu-btn" class="md:hidden">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
     </div>
     <div id="mobile-menu" class="hidden md:hidden bg-white px-6 pb-4">
       <a href="#about" class="block py-2 hover:text-green-600">Quem Somos</a>
@@ -51,31 +104,48 @@
   </nav>
 
   <!-- HERO -->
-  <section class="relative h-[90vh] min-h-[600px] flex items-center text-white overflow-hidden">
+  <section
+    class="relative h-[90vh] min-h-[600px] flex items-center text-white overflow-hidden"
+  >
     <div class="absolute inset-0 hero-gradient"></div>
-    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1470&q=80"
-         alt="Modern warehouse"
-         class="absolute inset-0 w-full h-full object-cover scale-110">
+    <img
+      src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1470&q=80"
+      alt="Modern warehouse"
+      class="absolute inset-0 w-full h-full object-cover scale-110"
+    />
     <div class="container mx-auto px-6 z-20 max-w-2xl">
       <div class="inline-block bg-black bg-opacity-40 p-6 rounded-md">
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white hero-text-shadow">
-          <span class="text-yellow-300">Eficiência</span> em<br>Distribuição Corporativa
+        <h1
+          class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white hero-text-shadow"
+        >
+          <span class="text-yellow-300">Eficiência</span> em<br />
+          Distribuição Corporativa
         </h1>
         <p class="text-lg md:text-xl text-white hero-text-shadow">
-          Soluções logísticas integradas que impulsionam seu negócio com agilidade e excelência operacional.
+          Soluções logísticas integradas que impulsionam seu negócio com agilidade
+          e excelência operacional.
         </p>
       </div>
       <div class="mt-8 flex flex-wrap gap-4">
-        <a href="#contact" class="bg-[var(--accent)] text-[var(--dark)] font-medium py-3 px-8 rounded-full transition hover:-translate-y-1">
+        <a
+          href="#contact"
+          class="bg-[var(--accent)] text-[var(--dark)] font-medium py-3 px-8 rounded-full transition hover:-translate-y-1"
+        >
           <i class="fas fa-phone-volume mr-2"></i> Fale com um especialista
         </a>
-        <a href="#products" class="bg-white/20 border border-white/50 text-white font-medium py-3 px-8 rounded-full transition">
+        <a
+          href="#products"
+          class="bg-white/20 border border-white/50 text-white font-medium py-3 px-8 rounded-full transition"
+        >
           Nossos Produtos <i class="fas fa-arrow-right ml-2"></i>
         </a>
       </div>
     </div>
     <div class="absolute bottom-10 left-0 right-0 flex justify-center animate-bounce">
-      <a href="#about" class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center border border-white/20 hover:border-white/40">
+      <a
+        href="#about"
+        class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center border border-white/20 hover:border-white/40"
+      >
         <i class="fas fa-chevron-down"></i>
       </a>
     </div>
@@ -90,7 +160,8 @@
       </h2>
       <div class="w-20 h-1 bg-[var(--accent)] mx-auto mt-4 mb-6"></div>
       <p class="text-gray-600 max-w-2xl mx-auto">
-        Especializada em distribuição corporativa, oferecemos soluções sob medida com certificação de qualidade do Governo de São Paulo.
+        Especializada em distribuição corporativa, oferecemos soluções sob medida
+        com certificação de qualidade do Governo de São Paulo.
       </p>
     </div>
 
@@ -101,9 +172,11 @@
           "Atendendo às demandas do setor público, fortalecendo o progresso."
         </h3>
         <div class="flex flex-col items-center">
-          <img src="./assets/logos/Logo_SP-01.png"
-               alt="Brasão do Governo do Estado de São Paulo"
-               class="h-16 mb-2">
+          <img
+            src="assets/logos/Logo_SP-01.png"
+            alt="Brasão do Governo do Estado de São Paulo"
+            class="h-16 mb-2"
+          />
           <span class="text-green-100">Atestados pelo Governo do Estado de São Paulo</span>
         </div>
       </div>
@@ -117,7 +190,8 @@
         </div>
         <h4 class="font-semibold mb-2">Localização Estratégica</h4>
         <p class="text-gray-600 text-sm">
-          Localizados em Elias Fausto, SP, atendemos diversos setores, de farmácias e laboratórios a indústrias e prefeituras.
+          Localizados em Elias Fausto, SP, atendemos diversos setores, de farmácias e
+          laboratórios a indústrias e prefeituras.
         </p>
       </div>
       <div class="bg-white p-8 rounded-lg shadow card-hover text-center">
@@ -126,7 +200,8 @@
         </div>
         <h4 class="font-semibold mb-2">Atendimento Personalizado</h4>
         <p class="text-gray-600 text-sm">
-          Atendimento consultivo, entendendo as necessidades de cada cliente para oferecer as melhores soluções.
+          Atendimento consultivo, entendendo as necessidades de cada cliente para
+          oferecer as melhores soluções.
         </p>
       </div>
       <div class="bg-white p-8 rounded-lg shadow card-hover text-center">
@@ -135,7 +210,8 @@
         </div>
         <h4 class="font-semibold mb-2">Excelência Comprovada</h4>
         <p class="text-gray-600 text-sm">
-          Somos atestados pelo Governo do Estado de São Paulo em entrega, qualidade, prazos e eficiência.
+          Somos atestados pelo Governo do Estado de São Paulo em entrega, qualidade,
+          prazos e eficiência.
         </p>
       </div>
     </div>
@@ -156,7 +232,8 @@
         </div>
         <h4 class="font-semibold mb-2">Missão</h4>
         <p class="text-gray-600 text-sm">
-          Fornecer soluções completas, ágeis e seguras para a distribuição nos setores público e privado.
+          Fornecer soluções completas, ágeis e seguras para a distribuição nos setores
+          público e privado.
         </p>
       </div>
       <div class="bg-[var(--yellow-light)] p-8 rounded-lg shadow card-hover">
@@ -165,7 +242,8 @@
         </div>
         <h4 class="font-semibold mb-2">Visão</h4>
         <p class="text-gray-600 text-sm">
-          Ser referência em produtos de alta qualidade, construindo parcerias duradouras e de confiança.
+          Ser referência em produtos de alta qualidade, construindo parcerias duradouras
+          e de confiança.
         </p>
       </div>
       <div class="bg-[var(--blue-light)] p-8 rounded-lg shadow card-hover">
@@ -174,7 +252,8 @@
         </div>
         <h4 class="font-semibold mb-2">Valores</h4>
         <p class="text-gray-600 text-sm">
-          Compromisso, eficiência, transparência, inovação, sustentabilidade e responsabilidade social.
+          Compromisso, eficiência, transparência, inovação, sustentabilidade e
+          responsabilidade social.
         </p>
       </div>
     </div>
@@ -192,28 +271,40 @@
           <i class="fas fa-chart-line text-[var(--primary)] text-xl"></i>
         </div>
         <h4 class="font-semibold mb-2">Expansão de Mercado</h4>
-        <p class="text-sm">Aumentamos nossa participação no setor privado com soluções inovadoras e personalizadas.</p>
+        <p class="text-sm">
+          Aumentamos nossa participação no setor privado com soluções inovadoras e
+          personalizadas.
+        </p>
       </div>
       <div class="bg-white bg-opacity-10 p-6 rounded-lg backdrop-blur-sm card-hover text-center">
         <div class="inline-block p-4 bg-[var(--accent)] rounded-full mb-4">
           <i class="fas fa-boxes text-[var(--primary)] text-xl"></i>
         </div>
         <h4 class="font-semibold mb-2">Diversificação do Portfólio</h4>
-        <p class="text-sm">Adicionamos novos produtos para atender segmentos diferentes com soluções completas.</p>
+        <p class="text-sm">
+          Adicionamos novos produtos para atender segmentos diferentes com soluções
+          completas.
+        </p>
       </div>
       <div class="bg-white bg-opacity-10 p-6 rounded-lg backdrop-blur-sm card-hover text-center">
         <div class="inline-block p-4 bg-[var(--accent)] rounded-full mb-4">
           <i class="fas fa-cogs text-[var(--primary)] text-xl"></i>
         </div>
         <h4 class="font-semibold mb-2">Otimização Operacional</h4>
-        <p class="text-sm">Implementamos logística eficiente e tecnologia de ponta para entregas rápidas e seguras.</p>
+        <p class="text-sm">
+          Implementamos logística eficiente e tecnologia de ponta para entregas rápidas
+          e seguras.
+        </p>
       </div>
       <div class="bg-white bg-opacity-10 p-6 rounded-lg backdrop-blur-sm card-hover text-center">
         <div class="inline-block p-4 bg-[var(--accent)] rounded-full mb-4">
           <i class="fas fa-bullhorn text-[var(--primary)] text-xl"></i>
         </div>
         <h4 class="font-semibold mb-2">Fortalecimento da Marca</h4>
-        <p class="text-sm">Investimos em marketing e atendimento personalizado para construir relacionamentos duradouros.</p>
+        <p class="text-sm">
+          Investimos em marketing e atendimento personalizado para construir
+          relacionamentos duradouros.
+        </p>
       </div>
     </div>
   </section>
@@ -221,7 +312,9 @@
   <!-- DIFERENCIAIS -->
   <section id="differentials" class="py-20 bg-gray-50">
     <div class="container mx-auto px-6 text-center mb-16">
-      <h2 class="text-3xl font-bold text-gray-800">Diferenciais da <span class="text-green-600">Growway</span></h2>
+      <h2 class="text-3xl font-bold text-gray-800">
+        Diferenciais da <span class="text-green-600">Growway</span>
+      </h2>
       <div class="w-20 h-1 bg-green-600 mx-auto mt-4"></div>
     </div>
     <div class="container mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -230,28 +323,36 @@
           <i class="fas fa-user-tie text-green-600 text-xl"></i>
         </div>
         <h4 class="font-semibold mb-2">Atendimento Personalizado</h4>
-        <p class="text-gray-600 text-sm">Equipe especializada focada em entender suas necessidades.</p>
+        <p class="text-gray-600 text-sm">
+          Equipe especializada focada em entender suas necessidades.
+        </p>
       </div>
       <div class="bg-white p-8 rounded-lg shadow card-hover text-center">
         <div class="inline-block p-4 bg-green-100 rounded-full mb-4">
           <i class="fas fa-star text-green-600 text-xl"></i>
         </div>
         <h4 class="font-semibold mb-2">Produtos de Alta Qualidade</h4>
-        <p class="text-gray-600 text-sm">Só trabalhamos com fornecedores certificados e excelência.</p>
+        <p class="text-gray-600 text-sm">
+          Só trabalhamos com fornecedores certificados e excelência.
+        </p>
       </div>
       <div class="bg-white p-8 rounded-lg shadow card-hover text-center">
         <div class="inline-block p-4 bg-green-100 rounded-full mb-4">
           <i class="fas fa-truck text-green-600 text-xl"></i>
         </div>
         <h4 class="font-semibold mb-2">Agilidade na Entrega</h4>
-        <p class="text-gray-600 text-sm">Logística eficiente com rastreamento em tempo real.</p>
+        <p class="text-gray-600 text-sm">
+          Logística eficiente com rastreamento em tempo real.
+        </p>
       </div>
       <div class="bg-white p-8 rounded-lg shadow card-hover text-center">
         <div class="inline-block p-4 bg-green-100 rounded-full mb-4">
           <i class="fas fa-tags text-green-600 text-xl"></i>
         </div>
         <h4 class="font-semibold mb-2">Preços Competitivos</h4>
-        <p class="text-gray-600 text-sm">Estrutura enxuta para oferecer os melhores preços do mercado.</p>
+        <p class="text-gray-600 text-sm">
+          Estrutura enxuta para oferecer os melhores preços do mercado.
+        </p>
       </div>
     </div>
   </section>
@@ -259,27 +360,58 @@
   <!-- MARCAS PARCEIRAS -->
   <section class="py-16 bg-white">
     <div class="container mx-auto px-6 text-center mb-12">
-      <h2 class="text-3xl font-bold text-gray-800 mb-4">Marcas <span class="text-green-600">Parceiras</span></h2>
+      <h2 class="text-3xl font-bold text-gray-800 mb-4">
+        Marcas <span class="text-green-600">Parceiras</span>
+      </h2>
       <div class="w-20 h-1 bg-green-600 mx-auto mb-6"></div>
       <p class="text-gray-600 max-w-3xl mx-auto">
-        Conheça algumas das marcas que confiam em nossos serviços e nossa gestão de distribuição.
+        Conheça algumas das marcas que confiam em nossos serviços e nossa gestão de
+        distribuição.
       </p>
     </div>
     <div class="container mx-auto px-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
-      <img src="./assets/logos/uniao.png"       alt="União"       class="h-16 brand-img mx-auto">
-      <img src="./assets/logos/santaisabel.png" alt="Santa Isabel" class="h-16 brand-img mx-auto">
-      <img src="./assets/logos/descarpack.png"  alt="Descarpack"   class="h-16 brand-img mx-auto">
-      <img src="./assets/logos/camil.png"       alt="Camil"        class="h-16 brand-img mx-auto">
-      <img src="./assets/logos/seara.png"       alt="Seara"        class="h-16 brand-img mx-auto">
-      <img src="./assets/logos/coqueiro.png"    alt="Coqueiro"     class="h-16 brand-img mx-auto">
+      <img
+        src="assets/logos/uniao.png"
+        alt="União"
+        class="h-16 brand-img mx-auto"
+      />
+      <img
+        src="assets/logos/santaisabel.png"
+        alt="Santa Isabel"
+        class="h-16 brand-img mx-auto"
+      />
+      <img
+        src="assets/logos/descarpack.png"
+        alt="Descarpack"
+        class="h-16 brand-img mx-auto"
+      />
+      <img
+        src="assets/logos/camil.png"
+        alt="Camil"
+        class="h-16 brand-img mx-auto"
+      />
+      <img
+        src="assets/logos/seara.png"
+        alt="Seara"
+        class="h-16 brand-img mx-auto"
+      />
+      <img
+        src="assets/logos/coqueiro.png"
+        alt="Coqueiro"
+        class="h-16 brand-img mx-auto"
+      />
     </div>
   </section>
 
   <!-- COMPROMISSO COM O CLIENTE -->
   <section class="py-20 bg-[var(--green-light)]">
     <div class="container mx-auto px-6">
-      <div class="bg-white rounded-xl shadow-xl p-10 max-w-4xl mx-auto text-center">
-        <h3 class="text-2xl font-bold mb-4">Compromisso com o <span class="text-green-600">Cliente</span></h3>
+      <div
+        class="bg-white rounded-xl shadow-xl p-10 max-w-4xl mx-auto text-center"
+      >
+        <h3 class="text-2xl font-bold mb-4">
+          Compromisso com o <span class="text-green-600">Cliente</span>
+        </h3>
         <div class="w-20 h-1 bg-green-600 mx-auto mb-8"></div>
         <div class="grid md:grid-cols-3 gap-8 mb-8">
           <div class="flex items-start">
@@ -288,7 +420,9 @@
             </div>
             <div>
               <h4 class="font-semibold mb-1">Equipe Qualificada</h4>
-              <p class="text-gray-600 text-sm">Equipe altamente qualificada para auxiliar em todas as etapas.</p>
+              <p class="text-gray-600 text-sm">
+                Equipe altamente qualificada para auxiliar em todas as etapas.
+              </p>
             </div>
           </div>
           <div class="flex items-start">
@@ -297,7 +431,9 @@
             </div>
             <div>
               <h4 class="font-semibold mb-1">Canais Acessíveis</h4>
-              <p class="text-gray-600 text-sm">Canais acessíveis e eficientes para entrar em contato.</p>
+              <p class="text-gray-600 text-sm">
+                Canais acessíveis e eficientes para entrar em contato.
+              </p>
             </div>
           </div>
           <div class="flex items-start">
@@ -306,15 +442,23 @@
             </div>
             <div>
               <h4 class="font-semibold mb-1">Solução Rápida</h4>
-              <p class="text-gray-600 text-sm">Solução rápida e eficaz para dúvidas e problemas.</p>
+              <p class="text-gray-600 text-sm">
+                Solução rápida e eficaz para dúvidas e problemas.
+              </p>
             </div>
           </div>
         </div>
-        <p class="font-semibold text-lg mb-4">Growway: Seu Parceiro Estratégico</p>
-        <p class="text-gray-600 max-w-2xl mx-auto mb-8">
-          Conte com a Growway para otimizar processos, reduzir custos e garantir o sucesso do seu negócio. Sua satisfação é o nosso maior objetivo!
+        <p class="font-semibold text-lg mb-4">
+          Growway: Seu Parceiro Estratégico
         </p>
-        <a href="#contact" class="bg-green-600 text-white py-3 px-8 rounded-full font-bold hover:bg-green-700 transition">
+        <p class="text-gray-600 max-w-2xl mx-auto mb-8">
+          Conte com a Growway para otimizar processos, reduzir custos e garantir o
+          sucesso do seu negócio. Sua satisfação é o nosso maior objetivo!
+        </p>
+        <a
+          href="#contact"
+          class="bg-green-600 text-white py-3 px-8 rounded-full font-bold hover:bg-green-700 transition"
+        >
           Fale Conosco Agora
         </a>
       </div>
@@ -324,21 +468,26 @@
   <!-- CONTATO -->
   <section id="contact" class="py-20 bg-gray-900 text-white">
     <div class="container mx-auto px-6 text-center mb-16">
-      <h2 class="text-3xl font-bold mb-4">Entre em <span class="text-green-400">Contato</span> Conosco!</h2>
+      <h2 class="text-3xl font-bold mb-4">
+        Entre em <span class="text-green-400">Contato</span> Conosco!
+      </h2>
       <div class="w-20 h-1 bg-green-400 mx-auto mb-6"></div>
       <p class="text-gray-300 max-w-3xl mx-auto">
-        Estamos prontos para atender sua empresa com qualidade, eficiência e os melhores preços do mercado.
+        Estamos prontos para atender sua empresa com qualidade, eficiência e os
+        melhores preços do mercado.
       </p>
     </div>
     <div class="container mx-auto px-6 grid md:grid-cols-2 gap-10 max-w-6xl">
       <div class="bg-gray-800 p-8 rounded-xl shadow-lg">
-        <h3 class="text-2xl font-bold text-green-400 mb-6">Fale com nossa equipe</h3>
+        <h3 class="text-2xl font-bold text-green-400 mb-6">
+          Fale com nossa equipe
+        </h3>
         <div class="space-y-6">
           <div class="flex items-start">
             <i class="fas fa-phone text-green-600 text-xl mr-4"></i>
             <div>
               <p class="font-semibold text-gray-300">Telefones</p>
-              <p class="text-gray-300">(19) 99978-8108<br>(19) 99385-3551</p>
+              <p class="text-gray-300">(19) 99978-8108<br />(19) 99385-3551</p>
             </div>
           </div>
           <div class="flex items-start">
@@ -346,8 +495,8 @@
             <div>
               <p class="font-semibold text-gray-300">E-mails</p>
               <p class="text-gray-300">
-                diretoria@growway.com.br<br>
-                compras@growway.com.br<br>
+                diretoria@growway.com.br<br />
+                compras@growway.com.br<br />
                 comercial@growway.com.br
               </p>
             </div>
@@ -361,21 +510,54 @@
           </div>
         </div>
         <div class="mt-10 flex space-x-4">
-          <a href="https://wa.me/5519999788108" target="_blank" class="bg-gray-700 p-3 rounded-full hover:bg-green-600 transition">
+          <a
+            href="https://wa.me/5519999788108"
+            target="_blank"
+            class="bg-gray-700 p-3 rounded-full hover:bg-green-600 transition"
+          >
             <i class="fab fa-whatsapp"></i>
           </a>
-          <a href="#contact" class="bg-gray-700 p-3 rounded-full hover:bg-green-600 transition"><i class="fab fa-facebook-f"></i></a>
-          <a href="#contact" class="bg-gray-700 p-3 rounded-full hover:bg-green-600 transition"><i class="fab fa-instagram"></i></a>
-          <a href="#contact" class="bg-gray-700 p-3 rounded-full hover:bg-green-600 transition"><i class="fab fa-linkedin-in"></i></a>
+          <a
+            href="#contact"
+            class="bg-gray-700 p-3 rounded-full hover:bg-green-600 transition"
+          >
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a
+            href="#contact"
+            class="bg-gray-700 p-3 rounded-full hover:bg-green-600 transition"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a
+            href="#contact"
+            class="bg-gray-700 p-3 rounded-full hover:bg-green-600 transition"
+          >
+            <i class="fab fa-linkedin-in"></i>
+          </a>
         </div>
       </div>
       <div class="bg-gray-800 p-8 rounded-xl shadow-lg">
         <h3 class="text-2xl font-bold text-green-400 mb-6">Envie uma mensagem</h3>
         <form class="space-y-4">
-          <input type="text" placeholder="Nome"      class="w-full px-4 py-3 bg-gray-700 rounded-lg focus:ring-2 focus:ring-green-400"/>
-          <input type="email" placeholder="E-mail" class="w-full px-4 py-3 bg-gray-700 rounded-lg focus:ring-2 focus:ring-green-400"/>
-          <input type="tel"   placeholder="Telefone"class="w-full px-4 py-3 bg-gray-700 rounded-lg focus:ring-2 focus:ring-green-400"/>
-          <select class="w-full px-4 py-3 bg-gray-700 rounded-lg focus:ring-2 focus:ring-green-400 text-gray-300">
+          <input
+            type="text"
+            placeholder="Nome"
+            class="w-full px-4 py-3 bg-gray-700 rounded-lg focus:ring-2 focus:ring-green-400"
+          />
+          <input
+            type="email"
+            placeholder="E-mail"
+            class="w-full px-4 py-3 bg-gray-700 rounded-lg focus:ring-2 focus:ring-green-400"
+          />
+          <input
+            type="tel"
+            placeholder="Telefone"
+            class="w-full px-4 py-3 bg-gray-700 rounded-lg focus:ring-2 focus:ring-green-400"
+          />
+          <select
+            class="w-full px-4 py-3 bg-gray-700 rounded-lg focus:ring-2 focus:ring-green-400 text-gray-300"
+          >
             <option>Assunto...</option>
             <option value="orcamento">Orçamento</option>
             <option value="duvida">Dúvida</option>
@@ -383,8 +565,15 @@
             <option value="reclamacao">Reclamação</option>
             <option value="outro">Outro</option>
           </select>
-          <textarea rows="4" placeholder="Mensagem" class="w-full px-4 py-3 bg-gray-700 rounded-lg focus:ring-2 focus:ring-green-400"></textarea>
-          <button type="submit" class="w-full bg-green-600 py-3 rounded-lg font-bold hover:bg-green-700 transition">
+          <textarea
+            rows="4"
+            placeholder="Mensagem"
+            class="w-full px-4 py-3 bg-gray-700 rounded-lg focus:ring-2 focus:ring-green-400"
+          ></textarea>
+          <button
+            type="submit"
+            class="w-full bg-green-600 py-3 rounded-lg font-bold hover:bg-green-700 transition"
+          >
             Enviar Mensagem
           </button>
         </form>
@@ -396,9 +585,14 @@
   <footer class="bg-gray-900 text-gray-300 border-t border-gray-800">
     <div class="container mx-auto px-6 py-10 grid md:grid-cols-4 gap-10">
       <div>
-        <img src="./assets/logos/logogroww.png" alt="Growway Logo" class="h-10 mb-4">
+        <img
+          src="assets/logos/logogroww.png"
+          alt="Growway Logo"
+          class="h-10 mb-4"
+        />
         <p class="text-sm">
-          Sua parceira estratégica em soluções de distribuição, combinando excelência operacional com atendimento personalizado.
+          Sua parceira estratégica em soluções de distribuição, combinando
+          excelência operacional com atendimento personalizado.
         </p>
       </div>
       <div>
@@ -422,25 +616,33 @@
       </div>
       <div>
         <h4 class="font-bold text-white mb-4">Contato</h4>
-        <p class="flex items-center"><i class="fas fa-map-marker-alt mr-2 text-green-400"></i>Elias Fausto, SP - Brasil</p>
-        <p class="flex items-center"><i class="fas fa-phone mr-2 text-green-400"></i>(19) 99978-8108</p>
-        <p class="flex items-center"><i class="fas fa-phone mr-2 text-green-400"></i>(19) 99385-3551</p>
+        <p class="flex items-center">
+          <i class="fas fa-map-marker-alt mr-2 text-green-400"></i> Elias Fausto,
+          SP - Brasil
+        </p>
+        <p class="flex items-center">
+          <i class="fas fa-phone mr-2 text-green-400"></i> (19) 99978-8108
+        </p>
+        <p class="flex items-center">
+          <i class="fas fa-phone mr-2 text-green-400"></i> (19) 99385-3551
+        </p>
       </div>
     </div>
-    <div class="border-t border-gray-800 py-6 flex flex-col md:flex-row justify-between items-center">
+    <!-- 3. Rodapé centralizado -->
+    <div class="border-t border-gray-800 py-6 flex flex-col md:flex-row justify-center items-center space-x-6">
       <p class="text-sm">&copy; 2023 Growway Distribuidora. Todos os direitos reservados.</p>
-      <div class="flex space-x-6 mt-4 md:mt-0">
-        <a href="#contact" class="hover:text-green-400"><i class="fab fa-facebook-f"></i></a>
-        <a href="#contact" class="hover:text-green-400"><i class="fab fa-instagram"></i></a>
-        <a href="#contact" class="hover:text-green-400"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://wa.me/5519999788108" class="hover:text-green-400"><i class="fab fa-whatsapp"></i></a>
-      </div>
+      <a href="#contact" class="hover:text-green-400"><i class="fab fa-facebook-f"></i></a>
+      <a href="#contact" class="hover:text-green-400"><i class="fab fa-instagram"></i></a>
+      <a href="#contact" class="hover:text-green-400"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://wa.me/5519999788108" class="hover:text-green-400"><i class="fab fa-whatsapp"></i></a>
     </div>
   </footer>
 
   <!-- BACK TO TOP -->
-  <button id="back-to-top"
-          class="fixed bottom-8 right-8 w-12 h-12 bg-green-600 text-white rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-opacity">
+  <button
+    id="back-to-top"
+    class="fixed bottom-8 right-8 w-12 h-12 bg-green-600 text-white rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-opacity"
+  >
     <i class="fas fa-arrow-up"></i>
   </button>
 
@@ -453,20 +655,20 @@
     const btn = document.getElementById('back-to-top');
     window.addEventListener('scroll', () => {
       if (window.pageYOffset > 300) {
-        btn.classList.replace('opacity-0','opacity-100');
-        btn.classList.replace('invisible','visible');
+        btn.classList.replace('opacity-0', 'opacity-100');
+        btn.classList.replace('invisible', 'visible');
       } else {
-        btn.classList.replace('opacity-100','opacity-0');
-        btn.classList.replace('visible','invisible');
+        btn.classList.replace('opacity-100', 'opacity-0');
+        btn.classList.replace('visible', 'invisible');
       }
     });
-    btn.addEventListener('click', () => window.scrollTo({top:0,behavior:'smooth'}));
+    btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
     // smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(a =>
       a.addEventListener('click', e => {
         e.preventDefault();
         const el = document.querySelector(a.getAttribute('href'));
-        if(el) window.scrollTo({top:el.offsetTop-80,behavior:'smooth'});
+        if (el) window.scrollTo({ top: el.offsetTop - 80, behavior: 'smooth' });
       })
     );
   </script>
